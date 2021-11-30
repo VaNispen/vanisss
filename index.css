@@ -1,0 +1,264 @@
+:root{
+    --primario: #5577D4 ;
+    --secundario: #BF1A2F;  
+}
+
+body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type:none;
+}
+
+body{
+    background: var(--primario);
+    overflow-x: hidden;
+    font-family: "Josefin Regular";
+}
+.button{
+    background: none;
+    border: 2px solid var(--secundario);
+    color: var(--secundario);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block; 
+}
+.button:hover{
+    color: #222;
+    background: var(--secundario);
+}
+
+@font-face{
+    font-family: "Josefin Regular";
+    src: url(/imagenes/fonts/JosefinSans-Regular.ttf);
+}
+
+h1,h2,h3,h4{
+    color: #DDDBFF;
+    font-weight: normal;
+
+}
+
+p,a,li{
+    color: #0c0464;
+}
+
+h1,h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.1em;
+}
+.principal{
+    font-size: 1.1em;
+}
+.historia{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+.historia h3{
+    text-align: center;
+    padding-left: 50px;
+}
+.historia a{
+    text-align: center;
+    background: rgb(12, 1, 75);
+    padding: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.site-nav{
+    margin: 0 20px;
+}
+
+.site-nav h1{
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secundario);
+}
+
+#portada{
+    padding: 0 20px 20px 20px;    
+    background: url(/imagenes/trianglesbackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 15px;
+
+}
+.texto-bienvenida{
+    grid-column: 1/6;
+}
+.imagen-bienvenida{
+    grid-column: 6/9;
+}
+.imagen-bienvenida img{
+    width: 100%;
+}
+.texto-bienvenida a{
+    margin: 20px 0;
+}
+#historia h3{
+    margin-bottom: 0px;
+    text-align: center;
+}
+.historia a{
+    grid-column: 1/9;
+    margin: 20px 0;
+    
+}
+.historia a *{
+    margin: 0 20px;
+    max-width: 40%;
+    align-self: center;
+}
+.historia h4{
+    color: rgb(116, 68, 165);
+    text-shadow: rgba(0,0,0,0.6);
+}
+
+footer{
+    padding: 30px 20px;
+    background-color: darkblue;
+    background-image: url(/imagenes/bluewave.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    }
+footer .copyright{
+    font-size: 1em;
+    color: rgb(116, 68, 165);
+    text-shadow: rgba(0,0,0,0.6);
+    
+}
+footer .redes{
+    display: flex;
+    justify-content: flex-end;
+
+}
+footer li{
+    margin: 10px 10px 10px 30px;
+    
+}
+footer img{
+    width: 20px;
+}
+
+
+@media screen and (min-width: 620px) {
+    .texto-bienvenida{
+        grid-column: 1/5;
+        align-self: center;
+    }
+    .imagen-bienvenida{
+        grid-column: 5/9;
+    }
+    .imagen-bienvenida img{
+        width: 100%;
+    }
+    #historia a{
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+
+    }
+    #historia a*{
+        margin: 10px 20%;
+        max-width: 60%;
+          
+    }
+    .historia h4{
+        text-align: center;
+    }
+    .site-nav{
+        padding: 0 20px;
+    }
+    .site-nav h1{
+        grid-column: 1/3;
+    }
+    .site-nav ul{
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .site-nav li{
+        margin-left: 20px;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 960px) {
+    body{
+        font-size: 18px;
+    }
+    .grid{
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .principal{
+        margin: 20px 20px;
+    }
+    .site-nav{
+        padding: 0 20px;
+    }
+    .site-nav h1{
+        grid-column: 1/3;
+    }
+    .site-nav ul{
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .site-nav li{
+        margin-left: 20px;
+    }
+    .texto-bienvenida{
+        align-self: center;
+    }
+    #portada{
+        padding-bottom: 40px;
+    }
+    .historia a*{
+        margin: 10px 10px;
+        max-width: 80%;
+        
+    }
+
+footer{
+    padding: 40px 20px;
+}
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 20px;
+    }
+    footer{
+        padding: 40px 20px;
+    }
+     
+}
